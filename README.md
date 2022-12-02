@@ -13,3 +13,5 @@
 - [Bucle for y range](https://j2logo.com/bucle-for-en-python/)
 - [String join](https://stackoverflow.com/questions/12453580/how-to-concatenate-join-items-in-a-list-to-a-single-string)
 - [String contains](https://realpython.com/python-string-contains-substring/)
+- [Escribir en un fichero de texto](https://manuais.iessanclemente.net/index.php/Python_-_Entrada/Salida_y_Ficheros)
+- [Convertir tupla a string](https://codefather.tech/blog/tuple-to-string-python/)

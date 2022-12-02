@@ -39,10 +39,13 @@ adn_generado = "".join(adn_aleatorio)
 
 # Compruebo si la nueva variante está contenida en el ADN generado.
 resultado = ""
+resultadoTupla = ""
 if NUEVA_VARIANTE in adn_generado:
     resultado = "Positivo: Sí se encuentra restos de la variante COVID."
+    resultadoTupla = "Positivo"
 else:
     resultado = "Negativo: No se encuentra restos de la variante COVID."
+    resultadoTupla = "Negativo"
 
 # Calculo la fecha y hora actuales
 fechaHora = datetime.now()
@@ -64,3 +67,18 @@ print("Fecha: %s" % fecha)
 print("Hora: %s" % hora)
 print("Código del paciente: %d" % codigo_paciente)
 print("Resultado: %s" % resultado)
+
+# Creo la tupla
+tupla = (fecha, hora, codigo_paciente, resultadoTupla)
+
+# Enviar la tupla a un fichero de texo.
+# Abrir fichero en modo escritura (con w).
+fw = open("cadenas.txt", "w")
+
+# Escribir la tupla.
+# Se usa un separador (en este caso, coma y espacio ", ") y se une cada elemento de la tupla
+# con join.
+fw.write(", ".join([str(valor) for valor in tupla]))
+
+#Cerrar fichero.
+fw.close()
